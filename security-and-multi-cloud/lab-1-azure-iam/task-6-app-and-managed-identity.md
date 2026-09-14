@@ -6,73 +6,94 @@
 
 **앱 등록(Application)** 은 애플리케이션의 **설계도**로 홈 테넌트에 딱 하나 만듭니다. **서비스 주체(Service Principal)** 는 그 설계도로 특정 테넌트에 실제로 만들어진 **'앱의 계정'** 이고, **역할 할당·관리자 동의가 붙는 대상**이 바로 이것입니다.
 
-1. Entra ID → [앱 등록] → [새 등록].
+1. Entra ID → \[앱 등록] → \[새 등록].
+
+<figure><img src="../../.gitbook/assets/image (1042).png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
 2. 이름 `app-iam-demo-user**`, 지원 계정 유형은 **이 조직 디렉터리의 계정만** 선택 → 등록.
-3. [개요] 에서 **애플리케이션(클라이언트) ID** 와 **디렉터리(테넌트) ID** 를 확인합니다.
-4. 개요 화면의 **'관리되는 애플리케이션'** 링크를 클릭합니다 → **엔터프라이즈 애플리케이션** 목록의 항목으로 이동합니다. **이것이 서비스 주체**입니다.
-5. Entra ID → [엔터프라이즈 애플리케이션] 목록에서도 `app-iam-demo-user**` 이 보이는지 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1043).png" alt="" width="542"><figcaption></figcaption></figure>
+
+
+
+3. \[개요] 에서 **애플리케이션(클라이언트) ID** 와 **디렉터리(테넌트) ID** 를 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1044).png" alt=""><figcaption></figcaption></figure>
+
+
+
+2. 개요 화면의 **'관리되는 애플리케이션'** 링크를 클릭합니다 → **엔터프라이즈 애플리케이션** 목록의 항목으로 이동합니다. **이것이 서비스 주체**입니다.
+
+<figure><img src="../../.gitbook/assets/image (1045).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1046).png" alt=""><figcaption></figcaption></figure>
+
+2. Entra ID → \[엔터프라이즈 애플리케이션] 목록에서도 `app-iam-demo-user**` 이 보이는지 확인합니다.
 
 > 💡 **앱 등록 = 설계도, 엔터프라이즈 애플리케이션 = 그 설계도로 찍어낸 계정.** 포털에서 두 메뉴에 같은 이름이 보이는 이유가 이것입니다.
 
+<figure><img src="../../.gitbook/assets/image (1047).png" alt="" width="563"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1048).png" alt=""><figcaption></figcaption></figure>
+
 ### 인증 방법의 안전 순서
 
-1. [인증서 및 비밀] 메뉴를 열어 **클라이언트 비밀 / 인증서 / 연합 자격 증명** 세 탭이 있는 것만 확인합니다.
+1. Entra ID → \[앱 등록] -> 해당 App -> \[인증서 및 비밀] 메뉴를 열어 **클라이언트 비밀 / 인증서 / 연합 자격 증명** 세 탭이 있는 것만 확인합니다.
 
-> ⚠️ **안전 순서: 클라이언트 시크릿(암호 — 만료·유출 위험) < 인증서 < 연합 자격 증명(시크릿 없이 토큰 교환).**
-> 실습에서는 시크릿을 만들지 않습니다. 만들었다면 **반드시 메모장이 아니라 Key Vault에 보관**하고, 실습 후 삭제하세요.
+<figure><img src="../../.gitbook/assets/image (1049).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1050).png" alt=""><figcaption></figcaption></figure>
+
+
+
+> ⚠️ **안전 순서: 클라이언트 시크릿(암호 — 만료·유출 위험) < 인증서 < 연합 자격 증명(시크릿 없이 토큰 교환).** 실습에서는 시크릿을 만들지 않습니다. 만들었다면 **반드시 메모장이 아니라 Key Vault에 보관**하고, 실습 후 삭제하세요.
+
+##
+
+##
 
 ## 6-2. 서비스 주체에 RBAC 역할 주기
 
-1. `rg-iam-user**` → [액세스 제어(IAM)] → [역할 할당 추가].
-2. 역할 **읽기 권한자**, 구성원 할당 대상에서 **사용자, 그룹 또는 서비스 주체** 를 고르고 `app-iam-demo-user**` 을 선택합니다.
-3. 역할 할당 목록에 **서비스 주체**로 표시되는 것을 확인합니다.
+1. `rg-iam-user**` → \[액세스 제어(IAM)] → \[역할 할당 추가]
+
+<figure><img src="../../.gitbook/assets/image (1051).png" alt="" width="527"><figcaption></figcaption></figure>
+
+
+
+
+
+2. 역할 **독자**, 구성원 할당 대상에서 **사용자, 그룹 또는 서비스 주체** 를 고르고 `app-iam-demo-user**` 을 선택합니다.
+
+<figure><img src="../../.gitbook/assets/image (1052).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1053).png" alt=""><figcaption></figcaption></figure>
+
+
+
+2. 역할 할당 목록에 **서비스 주체**로 표시되는 것을 확인합니다.
 
 > 💡 Task 3의 「① 누구에게」에는 사용자·그룹뿐 아니라 **서비스 주체와 관리 ID**도 들어갈 수 있습니다. 같은 3요소 구조가 그대로 적용됩니다.
 
-## 6-3. 관리 ID (Managed Identity)
+<figure><img src="../../.gitbook/assets/image (1054).png" alt=""><figcaption></figcaption></figure>
 
-VM이나 함수 같은 Azure 리소스가 다른 리소스에 접근할 때, **암호를 코드에 넣지 않고도** 인증하게 해 주는 자동 신원입니다. 리소스에서 켜면 Azure가 눈에 안 보이는 인증서를 발급하고 **자동으로 갱신**합니다.
+##
 
-> ⚠️ **이 단계에는 VM이 하나 필요합니다.** Lab 1 시점에는 아직 VM이 없으므로 둘 중 하나를 선택하세요.
-> - **(A)** `rg-iam-user**` 에 실습용 VM을 하나 만든다 — `Standard_B1s` · Ubuntu · **공인 IP 없음** 으로 충분합니다 (접속하지 않고 ID 설정만 봅니다). 확인 후 바로 삭제.
-> - **(B)** 이 단계만 건너뛰었다가 **Lab 2 Task 4에서 VM을 만든 뒤 돌아와서** 수행한다.
+* [ ] 앱 등록을 만들고 대응하는 **엔터프라이즈 애플리케이션(서비스 주체)** 을 찾았는가
+* [ ] 서비스 주체에 RBAC 역할을 할당했는가
 
-1. 대상 VM으로 이동합니다.
-2. [보안] → **[ID(Identity)]** → **시스템 할당** 탭 → 상태를 **켬** 으로 바꾸고 저장.
-3. 저장 후 나타나는 **개체(주체) ID** 를 확인합니다.
-4. 같은 화면의 **[Azure 역할 할당]** 버튼 → [역할 할당 추가] → 범위 `rg-iam-user**`, 역할 **Storage Blob Data Reader** 를 부여합니다.
 
-<table header-row="true">
-<tr>
-<td>유형</td>
-<td>수명</td>
-<td>용도</td>
-</tr>
-<tr>
-<td>시스템 할당</td>
-<td>리소스에 붙어 있고 리소스를 지우면 함께 삭제</td>
-<td>그 리소스 전용</td>
-</tr>
-<tr>
-<td>사용자 할당</td>
-<td>독립적으로 만들어 여러 리소스가 공유</td>
-<td>여러 VM이 같은 신원을 쓸 때</td>
-</tr>
-</table>
 
-> ❗ **관리 ID 자체에는 권한이 없습니다.** 'VM의 관리 ID에 Storage Blob Data Reader' 처럼 **RBAC 역할을 따로 부여**해야 비로소 동작합니다.
->
-> 💡 코드에서는 `169.254.169.254`(IMDS) 또는 SDK의 `DefaultAzureCredential` 로 토큰을 발급받습니다. 시크릿이 코드·환경변수에 전혀 남지 않는 것이 핵심 이점입니다.
 
-- [ ] 앱 등록을 만들고 대응하는 **엔터프라이즈 애플리케이션(서비스 주체)** 을 찾았는가
-- [ ] 서비스 주체에 RBAC 역할을 할당했는가
-- [ ] VM에 시스템 할당 관리 ID를 켜고 **역할을 따로 부여**했는가
-- [ ] 관리 ID 자체엔 권한이 없다는 것을 설명할 수 있는가
 
 ## 실습 정리
 
 이 Lab에서 만든 리소스는 이후 Lab에서 쓰지 않습니다. 과정 종료 후 아래를 정리하세요.
 
-- 역할 할당 제거 → 스토리지 계정·VM → `rg-iam-user**` 삭제
-- 앱 등록 `app-iam-demo-user**` 삭제
-- 사용자 `dev-user**`·`view-user**`, 그룹 `sec-dev-user**`·`sec-view-user**` 삭제
+* 역할 할당 제거 → 스토리지 계정 → `rg-iam-user**` 삭제
+  * app-iam-demo-user00
+  * sec-dev-user00
+  * sec-view-user00
+* 앱 등록 `app-iam-demo-user**` 삭제
+* 사용자 `dev-user**`·`view-user**`, 그룹 `sec-dev-user**`·`sec-view-user**` 삭제
