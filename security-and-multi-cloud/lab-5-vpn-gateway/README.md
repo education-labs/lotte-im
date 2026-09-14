@@ -1,41 +1,12 @@
 # Lab 5 - VPN Gateway 배포와 하이브리드 연결
 
-이 게이트웨이는 **Lab 3 Task 2에서 배포를 이미 시작**했습니다. Lab 2~3에서 만든 허브 VNet에 **밖으로 나가는 문**을 답니다. 여기서 만든 게이트웨이를 Lab 6에서 AWS 연결에 **그대로 재사용**합니다.
+이 게이트웨이는 **Lab 3 Task 2에서 배포를 이미 시작**했습니다. Lab 2\~3에서 만든 허브 VNet에 **밖으로 나가는 문**을 답니다. 여기서 만든 게이트웨이를 Lab 6에서 AWS 연결에 **그대로 재사용**합니다.
 
-> ⚠️ **이 페이지의 이름·대역은 예시입니다.** `vgw-hub-krc-prod-user**` → `vgw-hub-내번호`, `10.**.x` → `10.내번호.x` 로 **바꿔서 입력**하세요.
+> ⚠️ **이 페이지의 이름·대역은 예시입니다.** `vgw-hub-user**` → `vgw-hub-내번호`, `10.**.x` → `10.내번호.x` 로 **바꿔서 입력**하세요.
 
 ## 이번 Lab에서 만들 것
 
-<table header-row="true">
-<tr>
-<td>#</td>
-<td>리소스</td>
-<td>이름</td>
-<td>역할</td>
-<td>이후 사용처</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Virtual Network Gateway</td>
-<td>vgw-hub-krc-prod-user**</td>
-<td>Azure 쪽 VPN 장비</td>
-<td>Lab 6에서 재사용 ★</td>
-</tr>
-<tr>
-<td>2</td>
-<td>공용 IP 2개</td>
-<td>pip-vgw-1-user** / pip-vgw-2-user**</td>
-<td>게이트웨이의 외부 주소</td>
-<td>Lab 6에서 AWS에 입력 ★</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Local Network Gateway</td>
-<td>lng-onprem-idc-user**</td>
-<td>가상의 IDC를 정의</td>
-<td>연습용 (연결되지 않음)</td>
-</tr>
-</table>
+<table><thead><tr><th width="44.81817626953125">#</th><th width="140.181884765625">리소스</th><th width="168.9090576171875">이름</th><th>역할</th><th>이후 사용처</th></tr></thead><tbody><tr><td>1</td><td>Virtual Network Gateway</td><td>vgw-hub-user**</td><td>Azure 쪽 VPN 장비</td><td>Lab 6에서 재사용 ★</td></tr><tr><td>2</td><td>공용 IP 2개</td><td>pip-vgw-1-user** / pip-vgw-2-user**</td><td>게이트웨이의 외부 주소</td><td>Lab 6에서 AWS에 입력 ★</td></tr><tr><td>3</td><td>Local Network Gateway</td><td>lng-onprem-idc-user**</td><td>가상의 IDC를 정의</td><td>연습용 (연결되지 않음)</td></tr></tbody></table>
 
 ```
                    ┌────────────────────────────────────┐
