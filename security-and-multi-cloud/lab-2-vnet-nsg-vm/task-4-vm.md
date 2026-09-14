@@ -26,7 +26,7 @@
 
 
 
-3. 네트워킹 탭에서 vnet 과 subnet (`snet-web` ) 을 선택한 뒤 검토 + 만들기 를 클릭합니다.
+3. 네트워킹 탭에서 vnet 과 subnet (`snet-web`) 을 선택한 뒤 검토 + 만들기 를 클릭합니다.
 
 <figure><img src="../../.gitbook/assets/image (1078).png" alt=""><figcaption></figcaption></figure>
 
@@ -36,27 +36,43 @@
 
 4. 아래 정보와 같이 2번 VM을 생성합니다.  &#x20;
 
-<table><thead><tr><th width="180.81817626953125">항목</th><th>값</th></tr></thead><tbody><tr><td>리소스 그룹</td><td>rg-user**</td></tr><tr><td>가상 머신 이름</td><td>vm2-user**</td></tr><tr><td>이미지</td><td>Ubuntu Server 24.04 LTS</td></tr><tr><td>크기</td><td>Standard_B2s</td></tr><tr><td>인증</td><td>암호</td></tr><tr><td>사용자 이름 </td><td>azureuser</td></tr><tr><td>암호 </td><td>azureuser!234</td></tr><tr><td>네트워킹 -> 서브넷</td><td>snet-app</td></tr></tbody></table>
+<table><thead><tr><th width="180.81817626953125">항목</th><th>값</th></tr></thead><tbody><tr><td>리소스 그룹</td><td>rg-user**</td></tr><tr><td>가상 머신 이름</td><td>vm2-user**</td></tr><tr><td>이미지</td><td>Ubuntu Server 24.04 LTS</td></tr><tr><td>크기</td><td>Standard_B2s</td></tr><tr><td>인증</td><td>암호</td></tr><tr><td>사용자 이름 </td><td>azureuser</td></tr><tr><td>암호 </td><td>azureuser!234</td></tr><tr><td>네트워킹 -> 서브넷</td><td>snet-app</td></tr><tr><td>공인 IP ★</td><td>없음</td></tr></tbody></table>
 
 
 
-4. 1번 VM에 SSH로 접속합니다.
 
-**입력값**
 
-7. **VM1의 공인 IP와 VM2의 사설 IP를 포털에서 확인해 메모합니다.** (각 VM → \[개요])
+5. **VM1의 공인 IP와 VM2의 사설 IP를 포털에서 확인해 메모합니다.** (각 VM → \[개요])
 
-> 💡 `snet-app`(`10.**.9.0/24`)의 첫 VM이면 대개 **`10.**.9.4`** 가 할당됩니다. Azure가 각 서브넷의 앞 4개 주소(네트워크·게이트웨이·DNS×2)를 예약하기 때문입니다. **다를 수 있으니 아래 명령에는 실제로 확인한 IP를 넣으세요.**
+<figure><img src="../../.gitbook/assets/image (1079).png" alt="" width="563"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1080).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+6. Windows Powershell 실행 한뒤 아래 명령 수행하여 VM으로 접속합니다.
 
 ```bash
-chmod 400 <키파일>.pem
-ssh-add <키파일>.pem                                  # 에이전트에 키 등록
-ssh -A -i <키파일>.pem azureuser@<VM1 공인 IP>       # -A: 키 전달
-
-# VM1 에서 VM2 로 통신 확인 (10.**.9.4 = 메모해 둔 VM2 사설 IP)
-ping -c 4 10.**.9.4
-ssh azureuser@10.**.9.4                              # -A 접속이어야 성공
+ssh azureuser@<vm1 IP>
 ```
+
+<figure><img src="../../.gitbook/assets/image (1081).png" alt=""><figcaption></figcaption></figure>
+
+
+
+7. vm2의 사설 IP로 ping 테스트를 시도해봅니다.
+
+```bash
+ping -c 4 10.**.9.4
+```
+
+{% hint style="info" %}
+보통 vm의 ip 의 할당순서는 4번부터 진행됩니다.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (1082).png" alt=""><figcaption></figcaption></figure>
 
 > ⚠️ **ping이 안 되면** Task 3에서 각 NSG에 **ICMP 허용 규칙**을 넣었는지 확인하세요. 기본 규칙만으로는 VNet 내부 통신이 열려 있어도 ICMP가 막혀 있을 수 있습니다.
 
