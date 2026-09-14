@@ -24,7 +24,7 @@ terraform
 
 3. 제공받은 zip 파일을 Cloud9 에 업로드합니다.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 4. 압축을 해제합니다.
 
@@ -32,7 +32,7 @@ terraform
 unzip DevOps_Terraform.zip
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. 프로바이더 캐시공유 설정
 
