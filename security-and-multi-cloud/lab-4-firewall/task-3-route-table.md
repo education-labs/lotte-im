@@ -2,14 +2,39 @@
 
 **이 Lab의 핵심 단계입니다.**
 
-1. "경로 테이블"을 검색해 [만들기]
-2. 이름 : `rt-spoke-app-krc-prod-user**`, 게이트웨이 경로 전파 : **사용 안 함**
-3. 생성 후 [경로] → [추가]
-4. 경로 이름 : `udr-default`, 주소 접두사 : `0.0.0.0/0`
-5. 다음 홉 유형 : **가상 어플라이언스**
-6. 다음 홉 주소 : Task 1에서 메모한 방화벽 사설 IP
-7. ⭐ **SSH 예외 경로를 하나 더 추가합니다** — 아래 ⚠️를 먼저 읽으세요. [경로] → [추가] → 이름 `udr-ssh-exception`, 주소 접두사 `내 공인 IP/32`, 다음 홉 유형 **인터넷**.
-8. 내 공인 IP는 [whatismyip.com](https://www.whatismyip.com/) 에서 확인합니다 (예: `1.2.3.4` → `1.2.3.4/32`).
+1. "경로 테이블"을 검색해 \[만들기]
+
+<figure><img src="../../.gitbook/assets/image (1104).png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
+1. 리소스 그룹 : rg-user\*\* 이름 : `rt-spoke-user**`, 게이트웨이 경로 전파 : **사용 안 함**
+
+<figure><img src="../../.gitbook/assets/image (1106).png" alt="" width="453"><figcaption></figcaption></figure>
+
+
+
+2. 생성 완료 되면, \[경로] → \[추가]
+
+* 경로 이름 : `udr-default`,&#x20;
+* 대상유형 :  IP주소&#x20;
+* 대상 IP 주소 : 0.0.0.0/0
+* 다음 홉 형식 : **가상 어플라이언스**
+* 다음 홉 주소 : Task 1에서 메모한 방화벽 사설 IP (10.\*\*.0.4)
+
+<figure><img src="../../.gitbook/assets/image (1107).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+3. ⭐ **SSH 예외 경로를 하나 더 추가합니다** — 아래 ⚠️를 먼저 읽으세요. \[경로] → \[추가] → 이름 `udr-ssh-exception`, 대상 IP  주소 `내 공인 IP/32`, 다음 홉 유형 **인터넷**.
+
+{% hint style="info" %}
+내 공인 IP는 [whatismyip.com](https://www.whatismyip.com/) 에서 확인합니다 (예: `1.2.3.4` → `1.2.3.4/32`).
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (1108).png" alt=""><figcaption></figcaption></figure>
 
 > ⚠️ **이 예외 경로를 빼면 Task 5와 Lab 6의 SSH가 끊깁니다.**
 >
@@ -17,45 +42,12 @@
 >
 > `내IP/32 → 인터넷` 경로를 넣으면 내 PC로 가는 응답만 방화벽을 우회해 경로가 대칭이 됩니다.
 >
-> 💡 **핵심 원리** — ① 예외 경로를 안 넣었을 때 생기는 게 **비대칭 라우팅**이고, ② 예외 경로가 동작하는 이유는 **"더 구체적인 경로가 이긴다"** 입니다. `/32`가 `0.0.0.0/0`을 이기는 거죠.
->
 > 💡 **수강생마다 공인 IP가 다릅니다.** 같은 사무실에서 나가면 대개 하나지만, 다르면 각자 추가하거나 공통 출구 대역을 `/24`로 묶어 넣으세요.
 
-**입력값**
 
-<table header-row="true">
-<tr>
-<td>항목</td>
-<td>값</td>
-</tr>
-<tr>
-<td>이름</td>
-<td>rt-spoke-app-krc-prod-user**</td>
-</tr>
-<tr>
-<td>경로 전파</td>
-<td>사용 안 함</td>
-</tr>
-<tr>
-<td>주소 접두사</td>
-<td>0.0.0.0/0</td>
-</tr>
-<tr>
-<td>다음 홉 유형</td>
-<td>가상 어플라이언스</td>
-</tr>
-<tr>
-<td>다음 홉 주소</td>
-<td>10.**.0.4 (방화벽 사설 IP)</td>
-</tr>
-<tr>
-<td>연결 서브넷</td>
-<td>snet-web · snet-app · snet-db</td>
-</tr>
-</table>
 
-- [ ] 경로 테이블이 3개 서브넷에 연결되었는가
-- [ ] 경로 전파가 "사용 안 함"인가
-- [ ] 다음 홉이 사설 IP인가
-- [ ] ⭐ **SSH 예외 경로(내IP/32 → 인터넷)를 추가했는가**
-- [ ] 연결 직후 **VM1에 SSH가 여전히 되는지** 확인했는가
+* [ ] 경로 테이블이 3개 서브넷에 연결되었는가
+* [ ] 경로 전파가 "사용 안 함"인가
+* [ ] 다음 홉이 사설 IP인가
+* [ ] ⭐ **SSH 예외 경로(내IP/32 → 인터넷)를 추가했는가**
+
