@@ -2,16 +2,41 @@
 
 문제가 없을 때 미리 보는 습관을 들입니다.
 
-1. VM1 → [네트워킹] → [네트워크 설정] 으로 이동하여 네트워크 인터페이스를 클릭합니다.
-2. [유효 경로] 를 열어 시스템 경로를 확인합니다.
-3. [유효 보안 규칙] 을 열어 적용 중인 NSG 규칙을 확인합니다.
+1. VM1 → \[네트워킹] → \[네트워크 설정] 으로 이동하여 네트워크 인터페이스를 클릭합니다.
+
+<figure><img src="../../.gitbook/assets/image (1083).png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
+2. \[유효 경로] 를 열어 시스템 경로를 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1084).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+3. \[유효 보안 규칙] 을 열어 적용 중인 NSG 규칙을 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1085).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
 4. VNet 대역·`0.0.0.0/0` 경로가 어떤 다음 홉을 갖는지 기록합니다.
 
-> 📷 **[유효 경로] 화면** — `0.0.0.0/0 → Internet`, `10.**.8.0/22 → VirtualNetwork` 항목이 보이도록 캡처합니다. Lab 4에서 이 화면이 어떻게 바뀌는지 비교하게 됩니다.
+> 📷 **\[유효 경로] 화면** — `0.0.0.0/0 → Internet`, `10.**.8.0/22 → VirtualNetwork` 항목이 보이도록 캡처합니다. Lab 4에서 이 화면이 어떻게 바뀌는지 비교하게 됩니다.
 
-- [ ] `0.0.0.0/0` 의 다음 홉이 `Internet` 인가
-- [ ] VNet 대역의 다음 홉이 `VirtualNetwork` 인가
-- [ ] 유효 보안 규칙에 NSG 규칙이 반영되었는가
+<figure><img src="../../.gitbook/assets/image (1086).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+* [ ] `0.0.0.0/0` 의 다음 홉이 `Internet` 인가
+* [ ] VNet 대역의 다음 홉이 `VirtualNetwork` 인가
+* [ ] 유효 보안 규칙에 NSG 규칙이 반영되었는가
 
 > ⚠️ **이 화면을 캡처해 두세요.** Lab 4에서 UDR을 걸면 `0.0.0.0/0` 의 다음 홉이 `Internet → VirtualAppliance` 로 바뀝니다. 그 변화를 직접 비교합니다.
 >
