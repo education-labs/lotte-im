@@ -2,13 +2,9 @@
 
 1\. ec2 서비스로 이동한 뒤, 인스턴스 생성 클릭
 
-<figure><img src="../../.gitbook/assets/image (561).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (559).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (564).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
 
 2. 아래와 같이 이름을 입력하고 추가 태그 추가 클릭
 
@@ -16,15 +12,9 @@
 
 <figure><img src="../../.gitbook/assets/image (565).png" alt="" width="563"><figcaption></figcaption></figure>
 
-
-
-3. 키 : Env   값 : prod-user\*\*    을 입력
+3. 키 : Env 값 : prod-user\*\* 을 입력
 
 <figure><img src="../../.gitbook/assets/image (566).png" alt="" width="563"><figcaption></figcaption></figure>
-
-
-
-
 
 4. 나머지는 아래와 같이 설정한 뒤 인스턴스 생성
 
@@ -37,8 +27,6 @@
 * 퍼블릭 IP 자동할당 : 활성화
 * 방화벽(보안그룹) : 보안 그룹 생성
 * 보안그룹 이름 : user\*\*-tagec2-sg
-
-
 
 5. 아래설정과 같이 구성하여 두 번째 인스턴스 생성
 
@@ -56,7 +44,4 @@
 * 방화벽(보안그룹) : 기존 보안 그룹
 * 보안그룹 이름 : user\*\*-tagec2-sg
 
-
-
 <figure><img src="../../.gitbook/assets/image (567).png" alt=""><figcaption></figcaption></figure>
-
