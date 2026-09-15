@@ -233,7 +233,7 @@
     * [Task 5 - 허용·차단 검증](security-and-multi-cloud/lab-4-firewall/task-5-verify.md)
   * [Lab 5 - VPN Gateway 배포와 하이브리드 연결](security-and-multi-cloud/lab-5-vpn-gateway/README.md)
     * [Task 1 - VPN Gateway 배포 후 설정](security-and-multi-cloud/lab-5-vpn-gateway/task-1-vpn-gateway.md)
-    * [Task 2 - Local Network Gateway 구성 (온프레미스 가정) (opt)](security-and-multi-cloud/lab-5-vpn-gateway/task-2-local-network-gateway.md)
+    * [Task 2 - Local Network Gateway 구성 (온프레미스 가정)](security-and-multi-cloud/lab-5-vpn-gateway/task-2-local-network-gateway.md)
     * [Task 3 - 게이트웨이 상태 진단 실습(opt)](security-and-multi-cloud/lab-5-vpn-gateway/task-3-diagnostics.md)
   * [Lab 6 - Azure ↔ AWS 연결](security-and-multi-cloud/lab-6-aws-connection/README.md)
     * [Task 1 - AWS 측 구성 (VPC · EC2 · VGW · CGW)](security-and-multi-cloud/lab-6-aws-connection/task-1-aws-setup.md)
