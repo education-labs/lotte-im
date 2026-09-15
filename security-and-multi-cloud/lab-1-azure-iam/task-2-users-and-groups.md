@@ -6,7 +6,7 @@
 
 1. Entra ID → \[사용자] → \[새 사용자] → **새 사용자 만들기**.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (434).png" alt="" width="563"><figcaption></figcaption></figure>
 

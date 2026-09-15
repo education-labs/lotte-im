@@ -2,27 +2,27 @@
 
 1. 실행 되고 있는 인스턴스를 선택한 뒤 모니터링 탭 클릭, 세부 모니터링 관리 클릭
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2. 인스턴스 ID를 메모장에 저장한 뒤 세부모니터링 활성화 체크 후 확인 클릭
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 3. 모니터링 탭으로 이동하여 그래프 확인
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="307"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt="" width="307"><figcaption></figcaption></figure>
 
 4. 확장 버튼을 클릭하면 확대 그래프를 확인 가능
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Cloudwatch 서비스로 이동
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 6. 모든 지표 클릭
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt="" width="143"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt="" width="143"><figcaption></figcaption></figure>
 
 7. 찾아보기 > EC2 클릭
 

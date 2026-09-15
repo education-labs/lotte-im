@@ -1,7 +1,5 @@
 # Task 2 - GPT 활용 Pod
 
-
-
 1. ChatGPT 사이트에 접속
 
 {% embed url="https://chatgpt.com/" %}
@@ -12,7 +10,7 @@
 쿠버네티스에서 Pod를 만드는 Yaml 파일을 만들어줘
 ```
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. 추가 질문을 통해 해당 yaml 코드를 파일로 만드는 명령 생성
 
