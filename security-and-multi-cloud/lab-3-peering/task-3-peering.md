@@ -8,10 +8,12 @@
 
 2. 원격 가상 네트워크를 설정합니다. (인터페이스 아래쪽에 위치할 수도 있습니다.)
 
-* 피어링 링크 이름  :  `peer-hub-to-spoke-user**` &#x20;
+* 피어링 링크 이름  :  `peer-spoke-to-hub-user**` &#x20;
 * 가상네트워크 : 스포크 VNet
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1112).png" alt="" width="483"><figcaption></figcaption></figure>
+
+
 
 3. 원격 가상 네트워크 피어링  설정에는 아래 항목을 체크합니다.
 
@@ -19,9 +21,7 @@
 
 **② 전달된 트래픽 수신 허용**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="396"><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (1113).png" alt="" width="295"><figcaption></figcaption></figure>
 
 
 
@@ -29,22 +29,18 @@
 
 3. 로컬 가상 네트워크를 설정합니다.&#x20;
 
-* 피어링 링크 이름 : `peer-spoke-to-hub-user**`
+* 피어링 링크 이름 : `peer-hub-to-spoke-user**`
 * **① 액세스 허용(기본 체크됨) ② 전달된 트래픽 수신 허용 체크**
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1114).png" alt=""><figcaption></figcaption></figure>
 
 
 
+3. **두 VNet 모두**에서 피어링 목록을 열어 상태가 "연결됨"인지 확인합니다. \
+   새로 만드는 것이 아니라 **결과를 확인**하는 단계입니다.\
+   한 번으로 양쪽이 만들어집니다.<br>
 
-
-3.  **두 VNet 모두**에서 피어링 목록을 열어 상태가 "연결됨"인지 확인합니다. \
-    새로 만드는 것이 아니라 **결과를 확인**하는 단계입니다.\
-    한 번으로 양쪽이 만들어집니다.<br>
-
-    <figure><img src="../../.gitbook/assets/image (1087).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (1115).png" alt=""><figcaption></figcaption></figure>
 
 
 
