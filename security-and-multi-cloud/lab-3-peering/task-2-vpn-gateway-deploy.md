@@ -14,7 +14,7 @@ VPN Gateway는 허브 VNet의 **GatewaySubnet 위에** 만들어집니다. 그�
 
 2. 아래 값을 입력합니다.
 
-<table data-search="false"><thead><tr><th width="170.18182373046875">항목</th><th width="399.3636474609375">값</th><th>나중에 변경</th></tr></thead><tbody><tr><td>이름</td><td>vgw-hub-user**</td><td>불가</td></tr><tr><td>지역</td><td>Korea Central</td><td>불가</td></tr><tr><td>게이트웨이 종류</td><td>VPN</td><td>불가</td></tr><tr><td>SKU</td><td>VpnGw2AZ</td><td>업그레이드만 가능</td></tr><tr><td>가상 네트워크</td><td>vnet-hub-user** (GatewaySubnet 자동 인식)</td><td>불가</td></tr><tr><td>공용 IP</td><td>pip1-vgw-user**</td><td>—</td></tr><tr><td>활성-활성 모드</td><td>사용 → 두 번째 공용 IP pip-vgw-user**</td><td>가능(재배포 발생)</td></tr><tr><td>BGP</td><td>사용 안 함 (이번 실습은 정적 라우팅)</td><td>가능</td></tr></tbody></table>
+<table data-search="false"><thead><tr><th width="170.18182373046875">항목</th><th width="399.3636474609375">값</th><th>나중에 변경</th></tr></thead><tbody><tr><td>이름</td><td>vgw-hub-user**</td><td>불가</td></tr><tr><td>지역</td><td>Korea Central</td><td>불가</td></tr><tr><td>게이트웨이 종류</td><td>VPN</td><td>불가</td></tr><tr><td>SKU</td><td>VpnGw2AZ</td><td>업그레이드만 가능</td></tr><tr><td>가상 네트워크</td><td>hub-vnet-user** (GatewaySubnet 자동 인식)</td><td>불가</td></tr><tr><td>공용 IP</td><td>pip1-vgw-user**</td><td>—</td></tr><tr><td>활성-활성 모드</td><td>사용 → 두 번째 공용 IP : pip2-vgw-user**</td><td>가능(재배포 발생)</td></tr><tr><td>BGP</td><td>사용 안 함 (이번 실습은 정적 라우팅)</td><td>가능</td></tr></tbody></table>
 
 
 
