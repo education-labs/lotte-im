@@ -44,7 +44,7 @@ vgw-hub-krc-prod-user**  (Lab 5에서 만든 게이트웨이 — 그대로 사�
 
 1. 포털에서 **`vgw-hub-user**`** 로 이동합니다 (Lab 5에서 만든 것), 왼쪽 메뉴 \[연결] 클릭 → \[추가] 클릭.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 
@@ -54,11 +54,22 @@ vgw-hub-krc-prod-user**  (Lab 5에서 만든 게이트웨이 — 그대로 사�
 
 
 
-1. 가상 네트워크 게이트웨이가 `vgw-hub-user**`로 고정된 것을 확인합니다.
-2. 로컬 네트워크 게이트웨이에서 `lng-aws-vpc-user**` 선택.
-3. 공유 키(PSK)에 **④번 값**을 입력합니다 — AWS에서 지정한 값과 **정확히 동일**해야 합니다.
-4. IKE 프로토콜 **IKEv2** 선택 후 \[확인].
-5. 1\~3분 뒤 연결 상태가 **"연결됨"** 으로 바뀌는지 확인합니다.
+3. 가상 네트워크 게이트웨이 :  `vgw-hub-user**`  로컬 네트워크 게이트웨이 : `lng-aws-vpc-user**` 선택, 공유 키(PSK)에 **④번 값**을 입력합니다 — AWS에서 지정한 값과 **정확히 동일**해야 합니다.\
+   IKE 프로토콜 **IKEv2** 선택 후 다음 클릭 -> \[검토 + 만들기] -> \[만들기] 클릭
+
+<figure><img src="../../.gitbook/assets/image (1141).png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
+3. 1\~3분 뒤 연결 상태가 **"연결됨"** 으로 바뀌는지 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1142).png" alt="" width="563"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1143).png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
+
 
 > ⚠️ **PSK 복사 시 앞뒤 공백이 딸려오는 경우가 많습니다.** 붙여넣고 나서 끝에 커서를 두고 공백이 없는지 확인하세요. 이게 안 맞으면 IKE Phase 1에서 실패하고, 증상은 그냥 "연결 중"에서 멈춥니다.
 
@@ -66,6 +77,10 @@ vgw-hub-krc-prod-user**  (Lab 5에서 만든 게이트웨이 — 그대로 사�
 
 1. 🟧 **AWS 콘솔 탭으로 전환** → VPC → \[Site-to-Site VPN 연결] → \[터널] 탭.
 2. 터널 1의 상태가 **UP** 으로 바뀌었는지 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1144).png" alt=""><figcaption></figcaption></figure>
+
+
 
 > 💡 **양쪽에서 모두 확인하는 습관을 들이세요.** 한쪽만 보고 "연결됐다"고 판단하면 안 됩니다. 실무에서 Azure는 "연결됨"인데 AWS는 Down인 상태도 있습니다.
 
