@@ -4,15 +4,15 @@
 
 1. VPC → \[Site-to-Site VPN 연결] → \[VPN 연결 생성]
 
-<figure><img src="/broken/files/a64gz2dOqgCnoYkPbdmO" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1132).png" alt=""><figcaption></figcaption></figure>
 
 
 
 
 
-2. 이름 `vpn-to-azure-user**` 입력, 대상 게이트웨이 유형 **가상 프라이빗 게이트웨이** → `vgw-aws-user**` 선택.
+2.  이름 `vpn-to-azure-user**` 입력, 대상 게이트웨이 유형 **가상 프라이빗 게이트웨이** → `vgw-aws-user**` 선택.<br>
 
-<figure><img src="/broken/files/17fUwNlQLHhFxDahUonR" alt="" width="479"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1131).png" alt="" width="479"><figcaption></figcaption></figure>
 
 
 
@@ -20,18 +20,28 @@
 
 2. 고객 게이트웨이 **기존** → `cgw-azure-user**` 선택.
 3. 라우팅 옵션 **정적** 선택 → 정적 IP 접두사에 **`10.**.0.0/16`**(Azure 대역) 입력.
-4. \[터널 옵션]을 펼칩니다.
-5. 터널 1의 **사전 공유 키를 직접 지정**합니다 (영숫자 8자 이상, ④번 값으로 메모).
-6. \[VPN 연결 생성] 클릭.
-7. 생성 후 \[터널] 탭에서 **터널 1의 외부 IP 주소를 메모**합니다 (③번 값).
-8. 이 시점의 터널 상태가 **Down** 인 것을 확인합니다.
 
-| 항목        | 값                 | 비고         |
-| --------- | ----------------- | ---------- |
-| 라우팅       | 정적                | BGP 미사용    |
-| 정적 IP 접두사 | 10.\*\*.0.0/16    | Azure 쪽 대역 |
-| 터널 1 PSK  | 직접 지정 (영숫자 8자 이상) | ④ 메모 ★     |
-| 확인할 값     | 터널 1 외부 IP        | ③ 메모 ★     |
+<figure><img src="../../.gitbook/assets/image (1134).png" alt="" width="339"><figcaption></figcaption></figure>
+
+
+
+2. \[터널 옵션]을 펼칩니다. 터널 1의 **사전 공유 키를 직접 지정**합니다 (영숫자 8자 이상, 아래④번 값으로 메모)\
+   \
+   \[VPN 연결 생성] 클릭.
+
+<figure><img src="../../.gitbook/assets/image (1135).png" alt="" width="425"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1136).png" alt=""><figcaption></figcaption></figure>
+
+2. 생성 후 \[터널] 탭에서 **터널 1의 외부 IP 주소를 메모**합니다 (③번 값).
+3. 이 시점의 터널 상태가 **Down** 인 것을 확인합니다.
+
+| 항목        | 값              | 비고         |
+| --------- | -------------- | ---------- |
+| 라우팅       | 정적             | BGP 미사용    |
+| 정적 IP 접두사 | 10.\*\*.0.0/16 | Azure 쪽 대역 |
+| 터널 1 PSK  | awstoazure     | ④ 메모 ★     |
+| 확인할 값     | 터널 1 외부 IP     | ③ 메모 ★     |
 
 > ⚠️ **PSK를 직접 지정하세요.** 자동 생성된 키는 특수문자가 섞여 Azure에서 거부되거나 복사 중 오류가 나기 쉽습니다. 영숫자만으로 8자 이상 지어서 메모장에 적어두세요.
 >
