@@ -34,14 +34,21 @@
 <figure><img src="../../.gitbook/assets/image (1136).png" alt=""><figcaption></figcaption></figure>
 
 2. 생성 후 \[터널] 탭에서 **터널 1의 외부 IP 주소를 메모**합니다 (③번 값).
-3. 이 시점의 터널 상태가 **Down** 인 것을 확인합니다.
 
-| 항목        | 값              | 비고         |
-| --------- | -------------- | ---------- |
-| 라우팅       | 정적             | BGP 미사용    |
-| 정적 IP 접두사 | 10.\*\*.0.0/16 | Azure 쪽 대역 |
-| 터널 1 PSK  | awstoazure     | ④ 메모 ★     |
-| 확인할 값     | 터널 1 외부 IP     | ③ 메모 ★     |
+<figure><img src="../../.gitbook/assets/image (1138).png" alt=""><figcaption></figcaption></figure>
+
+
+
+3. 이 시점의 터널 상태가 **Down(아래로)** 인 것을 확인합니다.
+
+<figure><img src="../../.gitbook/assets/image (1139).png" alt=""><figcaption></figcaption></figure>
+
+| 항목               | 값              | 비고         |
+| ---------------- | -------------- | ---------- |
+| 라우팅              | 정적             | BGP 미사용    |
+| 정적 IP 접두사        | 10.\*\*.0.0/16 | Azure 쪽 대역 |
+| 터널 1 PSK(사전 공유키) | awstoazure     | ④ 메모 ★     |
+| 확인할 값            | 터널 1 외부 IP     | ③ 메모 ★     |
 
 > ⚠️ **PSK를 직접 지정하세요.** 자동 생성된 키는 특수문자가 섞여 Azure에서 거부되거나 복사 중 오류가 나기 쉽습니다. 영숫자만으로 8자 이상 지어서 메모장에 적어두세요.
 >
