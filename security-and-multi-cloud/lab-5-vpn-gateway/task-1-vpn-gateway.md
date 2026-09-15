@@ -13,9 +13,9 @@
 
 **① 허브 쪽** — `vnet-hub-user**` → \[피어링] → `peer-hub-to-spoke-user**` 클릭 → 「로컬 가상 네트워크 피어링 설정」에서 **세 번째 체크박스** 켜기 → \[저장]
 
-<figure><img src="../../.gitbook/assets/image (1110).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1116).png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1111).png" alt="" width="398"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1117).png" alt="" width="304"><figcaption></figcaption></figure>
 
 
 
