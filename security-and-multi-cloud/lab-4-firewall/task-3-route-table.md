@@ -44,6 +44,10 @@
 
 
 
+<figure><img src="../../.gitbook/assets/image (1119).png" alt=""><figcaption></figcaption></figure>
+
+
+
 > ⚠️ **이 예외 경로를 빼면 Task 5와 Lab 6의 SSH가 끊깁니다.**
 >
 > VM1은 공인 IP를 가지고 `snet-web`에 있습니다. `0.0.0.0/0 → 방화벽` UDR을 걸면 들어오는 SSH는 공인 IP로 직행하지만 **나가는 응답은 방화벽을 거쳐 다른 IP로 나갑니다.** 내 PC는 보낸 곳과 다른 주소에서 온 응답을 버리므로 접속이 안 됩니다. 이것이 **비대칭 라우팅**입니다.
