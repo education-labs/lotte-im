@@ -6,7 +6,7 @@
 
 1. AWS 콘솔 → VPC 서비스 → \[VPC 생성] 클릭, 이름 `aws-vpc-user**`, IPv4 CIDR `172.16.**.0/24` 입력 후 생성
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="467"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="467"><figcaption></figcaption></figure>
 
 > 계정을 공유하는 실습에서 같은 대역을 쓰면 콘솔 목록에 **같은 대역 VPC가 여러 개** 보여, 뒤 단계에서 EC2·VGW·라우팅 테이블을 **엉뚱한 VPC에 만드는 사고**가 자주 납니다.
 >
@@ -14,19 +14,19 @@
 
 3. \[서브넷] → \[서브넷 생성] → VPC 선택 → 이름 `subnet-private-user**`, CIDR `172.16.**.0/25` 입력 후 생성.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="404"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="404"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="350"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="350"><figcaption></figcaption></figure>
 
 3. EC2 서비스 → \[인스턴스 시작] → 이름 `ec2-user**` , AMI : **Amazon Linux 2023을** 선택합니다.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 4. 인스턴스 유형 **t3.micro** 선택, 키 페어 : key-user\*\* 으로 생성하고, 다운로드합니다. 그리고, 네트워크 설정 \[편집] → VPC와 서브넷을 3번에서 만든 것으로 지정합니다.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 

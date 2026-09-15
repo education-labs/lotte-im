@@ -64,7 +64,7 @@ Entra ID는 **라이선스 등급에 따라 메뉴 자체가 열리고 닫힙니
 
 2. 라이선스가 Free라면 기능이 잠겨 있거나 평가판 안내가 뜨는 것을 확인합니다.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 | 계층          | 대표 기능                                  |
 | ----------- | -------------------------------------- |

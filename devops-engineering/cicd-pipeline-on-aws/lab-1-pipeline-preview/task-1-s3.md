@@ -11,7 +11,7 @@ S3 버킷에 웹 페이지 소스를 업로드하여 정적 웹 사이트 호스
 
 3. 버킷 만들기를 클릭
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 4. 아래와 같이 설정 한뒤, 하단으로 스크롤하여 버킷 만들기 클릭
 
@@ -19,7 +19,7 @@ S3 버킷에 웹 페이지 소스를 업로드하여 정적 웹 사이트 호스
 * 버킷이름 접두사 : user##-website-source
 * 버킷 버전 관리 : 활성화
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (982).png" alt="" width="287"><figcaption></figcaption></figure></div>
 
@@ -38,7 +38,7 @@ S3 버킷에 웹 페이지 소스를 업로드하여 정적 웹 사이트 호스
 ```
 {% endcode %}
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
