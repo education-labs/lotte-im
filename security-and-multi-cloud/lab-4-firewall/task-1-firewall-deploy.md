@@ -86,7 +86,7 @@
 
 **Task 3에서 경로 테이블의 '다음 홉 주소'로 쓸 값입니다. 여기서 반드시 메모하세요.**
 
-1. 배포가 끝나면 `afw-hub-krc-prod-user**` → \[개요] 로 이동합니다.
+1. 배포가 끝나면 `firewall-user**` → \[개요] 로 이동합니다.
 
 <figure><img src="../../.gitbook/assets/image (1100).png" alt=""><figcaption></figcaption></figure>
 
