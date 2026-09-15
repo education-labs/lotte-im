@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Lab 6 - Azure ↔ AWS 연결
 
 이 과정의 도착점입니다. **Lab 5에서 만든 Azure 게이트웨이에 AWS를 연결**합니다.
